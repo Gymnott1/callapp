@@ -3,7 +3,6 @@
 
 import React, {memo} from 'react';
 import {View, TouchableOpacity, Text, StyleSheet, Image} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome'; 
 
 
 import PropTypes from 'prop-types';
@@ -58,12 +57,13 @@ const ListItem = (props) => {
             alignItems: 'center',
             flex: 2,
             paddingRight: 13,
-            color: '#515151',
+          
             margin: 10,
             width: 30,
             height: 30,
             borderRadius: 30,
-            marginRight: 10,}}
+            marginRight: 10,
+          }}
             
           />  
         

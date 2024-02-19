@@ -13,11 +13,13 @@ import {
   TextInput,
 } from 'react-native';
 
+
 import Contacts from 'react-native-contacts';
 import ListItem from './ListItem';
 
 const ContactScreen = () => {
   let [contacts, setContacts] = useState([]);
+  
 
   useEffect(() => {
     if (Platform.OS === 'android') {
@@ -121,8 +123,8 @@ const styles = StyleSheet.create({
   },
   
   searchBar: {
-    backgroundColor: '#525252',
-    color: 'white',
+    backgroundColor: '#632898',
+    color: '#535353',
     paddingHorizontal: 30,
     paddingVertical: Platform.OS === 'android' ? undefined : 15,
   },
