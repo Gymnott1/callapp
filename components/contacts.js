@@ -96,15 +96,13 @@ const ContactScreen = () => {
         <FlatList
           data={contacts}
           renderItem={(contact) => {
-            {
-              //console.log('contact -> ' + JSON.stringify(contact));
-            }
             return (
               <ListItem
                 key={contact.item.recordID}
                 item={contact.item}
                 onPress={openContact}
               />
+              
             );
           }}
           keyExtractor={(item) => item.recordID}

@@ -2,7 +2,9 @@
 // https://aboutreact.com/access-contact-list-react-native/
 
 import React, {memo} from 'react';
-import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {View, TouchableOpacity, Text, StyleSheet, Image} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome'; 
+
 
 import PropTypes from 'prop-types';
 import Avatar from './Avatar';
@@ -16,6 +18,7 @@ const getAvatarInitials = (textString) => {
     textSplit[0].charAt(0) + textSplit[textSplit.length - 1].charAt(0);
   return initials;
 };
+const icons = require('../assets/speak.png');
 
 const ListItem = (props) => {
   const shouldComponentUpdate = () => {
@@ -45,9 +48,27 @@ const ListItem = (props) => {
                 style={
                   styles.titleStyle
                 }>{`${item.givenName} ${item.familyName}`}</Text>
+                
             </View>
           </View>
+          <Image 
+            source= {icons}
+            
+            style={{ justifyContent: 'center',
+            alignItems: 'center',
+            flex: 2,
+            paddingRight: 13,
+            color: '#515151',
+            margin: 10,
+            width: 30,
+            height: 30,
+            borderRadius: 30,
+            marginRight: 10,}}
+            
+          />  
+        
         </View>
+        
       </TouchableOpacity>
     </View>
   );
@@ -86,13 +107,17 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#515151',
   },
-  con: {
-    backgroundColor: '#4591ed',
-    color: 'black',
-    paddingHorizontal: 15,
-    paddingVertical: 15,
-    fontSize: 20,
+  callT: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 2,
+    paddingRight: 13,
+    color: '#515151',
+    fontSize: 16,
+    margin: 10,
+    padding: 10,
   },
+
 });
 
 export default memo(ListItem);

@@ -13,7 +13,7 @@ import CallLogs from 'react-native-call-log';
 
 
 
-const Logscreen = () => {
+const  Settings= () => {
     const [callLogs, setCallLogs] = useState([]);
     
 useEffect(() => {
@@ -88,4 +88,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Logscreen;
+export default Settings;
